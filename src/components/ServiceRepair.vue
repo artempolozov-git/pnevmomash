@@ -1,0 +1,119 @@
+<template>
+  <section class="service-wrapper">
+    <div class="service-container">
+      <div class="service-information">
+        <h2 class="title">Сервисное обслуживание</h2>
+        <p class="description">Наша компания предоставляет услуги по сервисному ремонту и обслуживанию сварочных агрегатов фирмы Dеnyo и Airman.</p>
+        <div class="information">
+          <p>На время ремонта возможно предоставление подменного аппарата, во избежание простоев.</p>
+          <p><wbr>Если у Вас в эксплуатации имеется оборудование Denyo и требуется его ремонт
+            или профилактические работы, Вы можете направить нам сервисный запрос</p>
+        </div>
+        <form class="service-form">
+          <div class="data-input">
+            <input name="Имя" type="text" placeholder="Имя" required>
+          </div>
+          <div class="data-input">
+            <masked-input name="Телефон" mask="\+\7 (111) 111 11-11" type="text" placeholder="Телефон" required></masked-input>
+          </div>
+          <div class="send-button">
+            <input type="submit" id="my-form-button" value="Записаться на ремонт">
+          </div>
+        </form>
+      </div>
+      <div class="service-image"></div>
+    </div>
+  </section>
+</template>
+
+<script>
+    import MaskedInput from 'vue-masked-input'
+    export default {
+        name: "ServiceRepair",
+        components: {
+            MaskedInput
+        },
+    }
+</script>
+
+<style scoped>
+.service-wrapper {
+  margin-top: 150px;
+  padding: 0 150px;
+  box-sizing: border-box;
+}
+.service-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.service-information {
+  width: 50%;
+  margin-right: 40px;
+}
+.title {
+  font-size: 36px;
+  color: #212121;
+  font-weight: bold;
+}
+.description {
+  font-size: 24px;
+  margin-top: 15px;
+  color: #515151;
+  width: 80%;
+}
+.information {
+  color: #515151;
+}
+.information > div {
+  margin-top: 15px;
+}
+.service-image {
+  width: 649px;
+  height: 508px;
+  margin: auto 0;
+  background: url(../assets/images/services.webp);
+  background-size: cover;
+  background-position: center;
+}
+.service-form {
+  margin-top: 15px;
+}
+.data-input > input {
+  width: 400px;
+  height: 50px;
+  margin-top: 30px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  color: #515151;
+  font-family: HelveticaNeueCyr;
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
+  background-color: transparent;
+}
+.data-input > input:focus {
+  outline: none;
+  border: 2px solid #e76c1e;
+}
+.send-button > input {
+  margin-top: 30px;
+  padding: 25px 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #e76c1e;
+  font-size: 18px;
+  font-family: HelveticaNeueCyr;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition-duration: 0.3s;
+}
+.send-button > input:hover {
+  transform: scale(0.97);
+  transition-duration: 0.3s;
+  background-color: #e16c1e;
+}
+</style>

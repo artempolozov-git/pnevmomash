@@ -1,28 +1,76 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view name="header"></router-view>
+    <div id="app-content">
+      <transition name="app-router-fade" mode="out-in">
+        <router-view :key="defaultViewKey"></router-view>
+      </transition>
+    </div>
+    <router-view name="footer"></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
+  },
+  computed: {
+      defaultViewKey: function() {
+          return this.$route.name;
+      }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html, body {
+    height: 100%;
+  }
+  body {
+    margin: initial;
+    font-family: HelveticaNeueCyr;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(229, 229, 229) 70%, rgba(241,241,241,1) 100%);
+  }
+  @font-face {
+    font-family: HelveticaNeueCyr;
+    src: url('./assets/HelveticaNeueCyr-Heavy.ttf');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: HelveticaNeueCyr;
+    src: url('./assets/HelveticaNeueCyr-Bold.ttf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: HelveticaNeueCyr;
+    src: url('./assets/HelveticaNeueCyr-Medium.ttf');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: HelveticaNeueCyr;
+    src: url('./assets/HelveticaNeueCyr-Roman.ttf');
+    font-weight: 500;
+  }
+  #app-content {
+    flex: 1 0 auto;
+    max-width: 1920px;
+    align-self: center;
+    width: -webkit-fill-available;
+  }
+  @media only screen and (max-width : 1700px) {
+    body {
+      font-size: 14px;
+    }
+  }
 </style>
