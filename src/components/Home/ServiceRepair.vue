@@ -41,6 +41,7 @@
   margin-top: 150px;
   padding: 0 150px;
   box-sizing: border-box;
+  /*background-color: #F6F6F6;*/
 }
 .service-container {
   display: flex;
@@ -49,30 +50,30 @@
 }
 .service-information {
   width: 50%;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 .title {
-  font-size: 36px;
+  font-size: 45px;
   color: #212121;
   font-weight: bold;
+  margin-top: 0;
 }
 .description {
-  font-size: 24px;
+  font-size: 26px;
   margin-top: 15px;
+  font-weight: normal;
   color: #515151;
   width: 80%;
 }
 .information {
-  color: #515151;
-}
-.information > div {
   margin-top: 15px;
+  color: #515151;
 }
 .service-image {
   width: 649px;
   height: 508px;
   margin: auto 0;
-  background: url(../assets/images/services.webp);
+  background: url(../../assets/images/services.webp);
   background-size: cover;
   background-position: center;
 }
@@ -81,15 +82,15 @@
 }
 .data-input > input {
   width: 400px;
-  height: 50px;
+  height: 60px;
   margin-top: 30px;
-  padding: 0 15px;
+  padding: 0 20px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: #515151;
   font-family: HelveticaNeueCyr;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 1px solid #b1b1b1;
   background-color: transparent;
 }
@@ -101,7 +102,7 @@
   margin-top: 30px;
   padding: 25px 40px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #e76c1e;
   font-size: 18px;
   font-family: HelveticaNeueCyr;

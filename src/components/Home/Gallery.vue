@@ -55,48 +55,49 @@
 
 <style scoped>
 .gallery-wrapper {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 .title {
   padding: 0 150px;
   box-sizing: border-box;
-  margin-bottom: 40px;
-  font-size: 36px;
+  margin-bottom: 50px;
+  font-size: 45px;
   color: #212121;
   font-weight: bold;
+  text-align: center;
 }
 .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6,
 .photo-7, .photo-8, .photo-9 {
   width: 100%;
-  height: 500px;
+  height: 550px;
   background-size: cover;
   background-position: center;
 }
 .photo-1 {
-  background-image: url(../assets/images/gallery/equipment-photo.webp);
+  background-image: url(../../assets/images/gallery/equipment-photo.webp);
 }
 .photo-2 {
-  background-image: url(../assets/images/gallery/230LS.webp);
+  background-image: url(../../assets/images/gallery/230LS.webp);
 }
 .photo-3 {
-  background-image: url(../assets/images/gallery/unloading-machine.webp);
+  background-image: url(../../assets/images/gallery/unloading-machine.webp);
 }
 .photo-4 {
-  background-image: url(../assets/images/gallery/repair-equipment.webp);
+  background-image: url(../../assets/images/gallery/repair-equipment.webp);
 }
 .photo-5 {
-  background-image: url(../assets/images/gallery/maintenance-equipment.webp);
+  background-image: url(../../assets/images/gallery/maintenance-equipment.webp);
 }
 .photo-6 {
-  background-image: url(../assets/images/gallery/equipment-stock.webp);
+  background-image: url(../../assets/images/gallery/equipment-stock.webp);
 }
 .photo-7 {
-  background-image: url(../assets/images/gallery/open-equipment.webp);
+  background-image: url(../../assets/images/gallery/open-equipment.webp);
 }
 .photo-8 {
-  background-image: url(../assets/images/gallery/preparation-sale.webp);
+  background-image: url(../../assets/images/gallery/preparation-sale.webp);
 }
 .photo-9 {
-  background-image: url(../assets/images/gallery/dispatch-equipment.webp);
+  background-image: url(../../assets/images/gallery/dispatch-equipment.webp);
 }
 </style>

@@ -17,7 +17,7 @@
 <style scoped>
 .header-container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding: 100px 150px;
   box-sizing: border-box;
   background: url(../assets/images/header-background.webp);

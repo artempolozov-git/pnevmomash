@@ -1,0 +1,54 @@
+<template>
+  <div class="footer-navigation_wrapper">
+    <div class="block-title">Навигация по сайту:</div>
+    <nav class="nav-links">
+      <li class="link">Продажа</li>
+      <li class="link">Обслуживание</li>
+      <li class="link">Аренда</li>
+      <li class="link">О компании</li>
+      <li class="link">Контакты</li>
+    </nav>
+  </div>
+</template>
+
+<script>
+    export default {
+        name: "FooterNavigation"
+    }
+</script>
+
+<style scoped>
+.footer-navigation_wrapper {
+  margin-left: auto;
+}
+.block-title {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 24px;
+}
+.link {
+  width: max-content;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  list-style-type: none;
+  position: relative;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+.link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #e76c1e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.link:hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+</style>

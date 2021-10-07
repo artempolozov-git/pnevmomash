@@ -9,9 +9,9 @@
       <li class="link" id="last-link">Контакты</li>
     </nav>
     <div>
-      <a href="tel:+74953690672" class="phone-links">
+      <a href="tel:+79824174799" class="phone-links">
         <img src="@/assets/icons/phone-icon.svg">
-        <span>+7 (495) 369-06-72</span>
+        <span>+7 (982) 417-47-99</span>
       </a>
     </div>
   </div>
@@ -30,7 +30,6 @@
 }
 .logotype {
   width: 300px;
-  cursor: pointer;
 }
 .nav-links {
   display: flex;
@@ -39,7 +38,7 @@
 }
 .link {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 21px;
   margin-right: 60px;
   padding-bottom: 5px;
   display: inline-block;
@@ -78,7 +77,8 @@
 }
 .phone-links > span {
   color: #ffffff;
-  font-size: 21px;
+  font-size: 22px;
+  font-weight: normal;
   padding-bottom: 5px;
   position: relative;
 }

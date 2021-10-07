@@ -7,14 +7,17 @@
       </transition>
     </div>
     <router-view name="footer"></router-view>
+    <feedback></feedback>
   </div>
 </template>
 
 <script>
 
+import Feedback from "@/components/Feedback";
 export default {
   name: 'App',
   components: {
+      Feedback
 
   },
   computed: {
@@ -32,15 +35,15 @@ export default {
   body {
     margin: initial;
     font-family: HelveticaNeueCyr;
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 21px;
+    font-weight: 500;
   }
   #app {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(229, 229, 229) 70%, rgba(241,241,241,1) 100%);
+    /*background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(229, 229, 229) 70%, rgba(241,241,241,1) 100%);*/
   }
   @font-face {
     font-family: HelveticaNeueCyr;

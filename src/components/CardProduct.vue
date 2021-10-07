@@ -1,14 +1,12 @@
 <template>
-  <div class="cards-container" :style="inlineStyle">
-    <div class="cards-block">
+  <div class="card-wrapper" :style="inlineStyle">
+    <div class="card-container">
       <div class="product-logotype"><img :src="image"></div>
-      <div class="card-title">{{title}}</div>
-      <div class="specifications-product">
-        <div class="parameters-wrapper">
-          <div class="parameters-container">
-            <span class="parameter">{{value}}</span>
-          </div>
-        </div>
+      <h2 class="card-title">{{title}}</h2>
+      <div class="parameters-card">
+        <p class="parameters">{{power}}</p>
+        <p class="parameters">{{power}}</p>
+        <p class="parameters">{{power}}</p>
       </div>
     </div>
   </div>
@@ -19,9 +17,9 @@
         name: "CardProduct",
         props: {
             title: String,
-            value: Object,
-            background: String,
+            power: String,
             image: String,
+            background: String,
         },
         computed: {
             inlineStyle () {
@@ -34,11 +32,11 @@
 </script>
 
 <style scoped>
-.cards-container {
+.card-wrapper {
   width: 100%;
   height: 500px;
   margin-top: 30px;
-  border-radius: 5px;
+  border-radius: 6px;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
@@ -52,5 +50,9 @@
   color: #ffffff;
   font-weight: bold;
   margin-top: 10px;
+}
+.parameters {
+  color: #ffffff;
+  font-weight: normal;
 }
 </style>
