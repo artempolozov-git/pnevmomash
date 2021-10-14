@@ -1,12 +1,12 @@
 <template>
-  <div class="footer-navigation_wrapper">
+  <div class="footer-navigation__wrapper">
     <div class="block-title">Навигация по сайту:</div>
     <nav class="nav-links">
-      <li class="link">Продажа</li>
-      <li class="link">Обслуживание</li>
-      <li class="link">Аренда</li>
-      <li class="link">О компании</li>
-      <li class="link">Контакты</li>
+      <li class="link" v-scroll-to="{el:'#equipment'}">Продажа</li>
+      <li class="link" v-scroll-to="{el:'#service', offset: -150}">Обслуживание</li>
+      <li class="link" v-scroll-to="{el:'#rent'}">Аренда</li>
+      <li class="link" v-scroll-to="{el:'#about'}">О компании</li>
+      <li class="link" v-scroll-to="{el:'#contacts'}">Контакты</li>
     </nav>
   </div>
 </template>
@@ -18,13 +18,13 @@
 </script>
 
 <style scoped>
-.footer-navigation_wrapper {
+.footer-navigation__wrapper {
   margin-left: auto;
 }
 .block-title {
   color: #ffffff;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
 }
 .link {
   width: max-content;

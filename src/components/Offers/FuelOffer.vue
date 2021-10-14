@@ -1,7 +1,7 @@
 <template>
-  <section class="offers-wrapper">
+  <section class="offers__wrapper">
     <div class="background-gradient">
-      <div class="offers-container">
+      <div class="offers__container">
         <h2 class="title">Установка дополнительного топливного бака</h2>
         <p class="description">Новая доработка от нашей компании!</p>
         <p class="description">Время автономной работы агрегата в 2 раза больше!</p>
@@ -23,32 +23,35 @@
 </script>
 
 <style scoped>
-  .offers-wrapper {
-    margin: 150px auto 0;
-    width: 65%;
+  .offers__wrapper {
+    margin: 150px auto;
+    width: 60%;
+    transition-duration: 0.3s;
   }
   .background-gradient {
-    width: 100%;
-    border-radius: 16px;
-    box-sizing: border-box;
     background: linear-gradient(0deg, rgba(36,123,234,1) 0%, rgba(47,134,244,1) 60%);
+    transition: transform .3s;
   }
-  .offers-container {
-    padding: 80px;
-    border-radius: 16px;
-    background: url(../../assets/images/fuel-background.webp);
+  .offers__container {
+    padding: 70px;
+    background: url(../../assets/images/offers/fuel-background.webp);
     background-size: cover;
     background-position: center;
+  }
+  .background-gradient:hover {
+    transform: scale(1.02);
+    transition: transform .3s;
   }
   .title {
     font-weight: bold;
     color: #ffffff;
-    font-size: 45px;
-    width: 70%;
+    font-size: 36px;
+    width: 60%;
     margin: 0 0 20px;
   }
   .description {
     color: #ffffff;
+    font-size: 20px;
     margin: 0;
     font-weight: normal;
   }
@@ -56,10 +59,11 @@
     display: flex;
     align-items: center;
     width: max-content;
-    border-radius: 6px;
     margin-top: 40px;
     padding: 15px 40px;
     box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
     text-decoration: none;
     background: transparent;
     border: 3px solid #ffffff;
@@ -74,8 +78,13 @@
     font-weight: normal;
   }
   .play-button:hover {
-    transform: scale(0.97);
+    transform: scale(0.95);
     transition-duration: 0.3s;
     background-color: rgba(245, 245, 245, 0.11);
+  }
+  @media only screen and (max-width : 1680px) {
+    .offers__wrapper {
+      width: 70%;
+    }
   }
 </style>

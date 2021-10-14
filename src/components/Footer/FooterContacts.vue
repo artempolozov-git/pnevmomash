@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-contacts_wrapper">
+  <div class="footer-contacts__wrapper">
     <div class="block-title">Мы на связи:</div>
     <div>
       <a class="contact-links" href="tel:+79824174799">+7 (982) 417-47-99</a>
@@ -20,13 +20,13 @@
 </script>
 
 <style scoped>
-.footer-contacts_wrapper {
+.footer-contacts__wrapper {
   margin-left: auto;
 }
 .block-title {
   color: #ffffff;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
 }
 .contact-links {
   display: flex;
@@ -36,7 +36,7 @@
   cursor: pointer;
   margin-top: 20px;
   color: #b1b1b1;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   padding-bottom: 5px;
   position: relative;

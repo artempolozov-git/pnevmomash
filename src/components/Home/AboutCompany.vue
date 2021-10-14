@@ -1,9 +1,9 @@
 <template>
-  <section class="about-wrapper">
-    <div class="about-container">
+  <section class="about__wrapper" id="about">
+    <div class="about__container">
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide class="certificate"></swiper-slide>
-        <swiper-slide class="certificate"></swiper-slide>
+        <swiper-slide class="certificate-dealer"></swiper-slide>
+        <swiper-slide class="certificate-partner"></swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
@@ -21,8 +21,8 @@
             наших клиентов. Пневмомаш-Сургут сегодня это комплексная помощь нашим клиентам
             в любых вопросах касающихся оборудования Denyo.</p>
         </div>
-        <div class="send-button">
-          <span>Получить КП</span>
+        <div class="send-button" @click="feedbackForm">
+          <span>Получить КП на оборудование</span>
         </div>
       </div>
     </div>
@@ -47,17 +47,24 @@
                     }
                 }
             }
-        }
+        },
+        methods: {
+            feedbackForm(){
+                var form = document.getElementById("feedback");
+                form.style.display = (form.style.display == 'none') ? 'block' : 'none'
+            }
+        },
     }
 </script>
 
 <style scoped>
-.about-wrapper {
+.about__wrapper {
   margin-top: 150px;
   padding: 0 150px;
   box-sizing: border-box;
+  transition-duration: 0.3s;
 }
-.about-container {
+.about__container {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -72,9 +79,13 @@
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   left: 0;
 }
-.certificate {
-  margin: auto 0;
+.certificate-dealer {
   background: url(../../assets/images/certificates/dealer-certificate.webp);
+  background-size: cover;
+  background-position: center;
+}
+.certificate-partner {
+  background: url(../../assets/images/certificates/partner-certificate.webp);
   background-size: cover;
   background-position: center;
 }
@@ -83,13 +94,13 @@
   margin: auto 0 auto 100px;
 }
 .title {
-  font-size: 45px;
-  color: #212121;
+  font-size: 32px;
+  color: #2a2b30;
   font-weight: bold;
   margin-top: 0;
 }
 .description {
-  font-size: 26px;
+  font-size: 20px;
   margin-top: 15px;
   font-weight: normal;
   color: #515151;
@@ -98,13 +109,15 @@
 .information {
   margin-top: 15px;
   color: #515151;
+  width: 80%;
 }
 .send-button  {
   width: max-content;
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 25px 40px;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 18px;
   background-color: #e76c1e;
   font-weight: normal;
   color: #ffffff;
@@ -114,8 +127,13 @@
   transition-duration: 0.3s;
 }
 .send-button:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
   transition-duration: 0.3s;
-  background-color: #e16c1e;
+  background-color: #ff7621;
+}
+@media only screen and (max-width : 1680px) {
+  .about__wrapper {
+    padding: 0 100px;
+  }
 }
 </style>

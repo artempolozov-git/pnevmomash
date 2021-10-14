@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery-wrapper">
+  <section class="gallery__wrapper">
     <h2 class="title">Фотографии нашей компании</h2>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="photo-1"></swiper-slide>
@@ -54,22 +54,22 @@
 </script>
 
 <style scoped>
-.gallery-wrapper {
+.gallery__wrapper {
   margin-top: 100px;
 }
 .title {
   padding: 0 150px;
   box-sizing: border-box;
   margin-bottom: 50px;
-  font-size: 45px;
-  color: #212121;
+  font-size: 32px;
+  color: #2a2b30;
   font-weight: bold;
   text-align: center;
 }
 .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6,
 .photo-7, .photo-8, .photo-9 {
   width: 100%;
-  height: 550px;
+  height: 500px;
   background-size: cover;
   background-position: center;
 }

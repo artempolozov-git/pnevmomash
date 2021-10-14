@@ -1,6 +1,6 @@
 <template>
-  <section class="contacts-wrapper">
-    <div class="contacts-container">
+  <section class="contacts__wrapper" id="contacts">
+    <div class="contacts__container">
       <div class="contacts-information">
         <h2 class="title">Контакты</h2>
         <div class="contacts">
@@ -40,20 +40,21 @@
 </script>
 
 <style scoped>
-.contacts-wrapper {
+.contacts__wrapper {
   margin-top: 150px;
   padding: 100px 200px;
   box-sizing: border-box;
   background-color: #2a2b30;
   border-bottom: 2px solid #b1b1b1;
+  transition-duration: 0.3s;
 }
-.contacts-container {
+.contacts__container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .title {
-  font-size: 45px;
+  font-size: 32px;
   color: #ffffff;
   font-weight: bold;
   margin-top: 0;
@@ -63,7 +64,7 @@
   margin-top: 40px;
 }
 .address > span {
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
   font-weight: normal;
 }
@@ -87,7 +88,7 @@
 }
 .contact-links > span {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   padding-bottom: 5px;
   position: relative;
@@ -112,9 +113,12 @@
   margin-left: auto;
 }
 .map > iframe {
-  /*width="780px" height="615px"*/
   width: 780px;
   height: 615px;
-  border-radius: 6px;
+}
+@media only screen and (max-width : 1680px) {
+  .contacts__wrapper {
+    padding: 100px 150px;
+  }
 }
 </style>

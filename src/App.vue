@@ -18,7 +18,6 @@ export default {
   name: 'App',
   components: {
       Feedback
-
   },
   computed: {
       defaultViewKey: function() {
@@ -35,7 +34,7 @@ export default {
   body {
     margin: initial;
     font-family: HelveticaNeueCyr;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 500;
   }
   #app {
@@ -71,7 +70,7 @@ export default {
     align-self: center;
     width: -webkit-fill-available;
   }
-  @media only screen and (max-width : 1700px) {
+  @media only screen and (max-width : 1536px) {
     body {
       font-size: 14px;
     }

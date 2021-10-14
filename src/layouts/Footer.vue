@@ -1,17 +1,17 @@
 <template>
-  <footer class="footer-wrapper">
-    <div class="footer-container__main">
+  <footer class="footer__wrapper">
+    <div class="footer__container__main">
       <div class="logo-container">
         <div class="logotype"><img src="@/assets/icons/logotype.svg"></div>
-        <div class="up-button"><img src="@/assets/icons/arrow-up.svg"></div>
+        <div class="up-button" v-scroll-to="{el:'#up'}"><img src="@/assets/icons/arrow-up.svg"></div>
       </div>
       <footer-contacts></footer-contacts>
       <footer-navigation></footer-navigation>
       <footer-callback></footer-callback>
     </div>
-    <div class="privacy-container">
+    <div class="privacy__container">
       <div class="copyright">© 2021 ООО «Пневмомаш-Сургут»</div>
-      <div class="privacy-policy">Политика конфиденциальности</div>
+      <router-link class="privacy-policy" :to="{ name: 'privacy'}" target="_blank">Политика конфиденциальности</router-link>
     </div>
   </footer>
 </template>
@@ -22,19 +22,30 @@
     import FooterCallback from "@/components/Footer/FooterCallback";
     export default {
         name: "Footer",
-        components: {FooterCallback, FooterNavigation, FooterContacts}
+        components: {
+            FooterCallback,
+            FooterNavigation,
+            FooterContacts
+        },
+        methods: {
+            goToPage(page) {
+                this.$router.push(page);
+                window.scrollTo(0,0);
+            }
+        }
     }
 </script>
 
 <style scoped>
-.footer-wrapper {
+.footer__wrapper {
   background-color: #2a2b30;
 }
-.footer-container__main  {
+.footer__container__main  {
   display: flex;
   padding: 100px 150px;
   box-sizing: border-box;
   border-bottom: 1px solid #b1b1b1;
+  transition-duration: 0.3s;
 }
 .logotype {
   width: 300px;
@@ -47,15 +58,16 @@
   transition-duration: 0.3s;
 }
 .up-button > img:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
   transition-duration: 0.3s;
   background-color: rgba(245, 245, 245, 0.11);
 }
-.privacy-container {
+.privacy__container {
   display: flex;
   align-items: center;
   padding: 40px 150px;
   box-sizing: border-box;
+  transition-duration: 0.3s;
 }
 .copyright {
   color: #ffffff;
@@ -66,6 +78,8 @@
   padding-bottom: 5px;
   position: relative;
   cursor: pointer;
+  outline: none;
+  text-decoration: none;
 }
 .privacy-policy:after {
   content: '';
@@ -82,5 +96,13 @@
 .privacy-policy:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+@media only screen and (max-width : 1680px) {
+  .footer__container__main  {
+    padding: 100px 100px;
+  }
+  .privacy__container {
+    padding: 40px 100px;
+  }
 }
 </style>

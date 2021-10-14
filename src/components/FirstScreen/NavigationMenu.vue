@@ -1,12 +1,12 @@
 <template>
-  <div class="nav-wrapper">
+  <div class="nav__wrapper">
     <div class="logotype"><img src="@/assets/icons/logotype.svg"></div>
     <nav class="nav-links">
-      <li class="link">Продажа</li>
-      <li class="link">Обслуживание</li>
-      <li class="link">Аренда</li>
-      <li class="link">О компании</li>
-      <li class="link" id="last-link">Контакты</li>
+      <li class="link" v-scroll-to="{el:'#equipment'}">Продажа</li>
+      <li class="link" v-scroll-to="{el:'#service', offset: -150}">Обслуживание</li>
+      <li class="link" v-scroll-to="{el:'#rent'}">Аренда</li>
+      <li class="link" v-scroll-to="{el:'#about'}">О компании</li>
+      <li class="link" id="last-link" v-scroll-to="{el:'#contacts'}">Контакты</li>
     </nav>
     <div>
       <a href="tel:+79824174799" class="phone-links">
@@ -19,17 +19,17 @@
 
 <script>
     export default {
-        name: "NavigationMenu"
+        name: "NavigationMenu",
     }
 </script>
 
 <style scoped>
-.nav-wrapper {
+.nav__wrapper {
   display: flex;
   align-items: center;
 }
 .logotype {
-  width: 300px;
+  width: 17%;
 }
 .nav-links {
   display: flex;
@@ -38,9 +38,10 @@
 }
 .link {
   color: #ffffff;
-  font-size: 21px;
+  font-weight: normal;
   margin-right: 60px;
   padding-bottom: 5px;
+  font-size: 18px;
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -77,7 +78,7 @@
 }
 .phone-links > span {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   padding-bottom: 5px;
   position: relative;

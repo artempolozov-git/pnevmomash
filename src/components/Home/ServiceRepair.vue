@@ -1,6 +1,6 @@
 <template>
-  <section class="service-wrapper">
-    <div class="service-container">
+  <section class="service__wrapper" id="service">
+    <div class="service__container">
       <div class="service-information">
         <h2 class="title">Сервисное обслуживание</h2>
         <p class="description">Наша компания предоставляет услуги по сервисному ремонту и обслуживанию сварочных агрегатов фирмы Dеnyo и Airman.</p>
@@ -37,37 +37,35 @@
 </script>
 
 <style scoped>
-.service-wrapper {
-  margin-top: 150px;
+.service__wrapper {
   padding: 0 150px;
-  box-sizing: border-box;
   /*background-color: #F6F6F6;*/
 }
-.service-container {
+.service__container {
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .service-information {
   width: 50%;
-  margin-right: 60px;
 }
 .title {
-  font-size: 45px;
-  color: #212121;
+  font-size: 32px;
+  color: #333333;
   font-weight: bold;
   margin-top: 0;
 }
 .description {
-  font-size: 26px;
+  font-size: 20px;
   margin-top: 15px;
   font-weight: normal;
   color: #515151;
   width: 80%;
 }
 .information {
+  width: 80%;
   margin-top: 15px;
-  color: #515151;
+  color: #737373;
 }
 .service-image {
   width: 649px;
@@ -86,11 +84,10 @@
   margin-top: 30px;
   padding: 0 20px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  color: #515151;
   font-family: HelveticaNeueCyr;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid #b1b1b1;
   background-color: transparent;
 }
@@ -102,7 +99,7 @@
   margin-top: 30px;
   padding: 25px 40px;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 5px;
   background-color: #e76c1e;
   font-size: 18px;
   font-family: HelveticaNeueCyr;
@@ -113,8 +110,8 @@
   transition-duration: 0.3s;
 }
 .send-button > input:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
   transition-duration: 0.3s;
-  background-color: #e16c1e;
+  background-color: #ff7621;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="footer-callback_wrapper">
-    <div class="play-button">
+  <div class="footer-callback__wrapper">
+    <div class="feedback-button" @click="feedbackForm">
       <span>Обратная связь</span>
     </div>
     <div class="catalog">
@@ -11,19 +11,26 @@
 
 <script>
     export default {
-        name: "FooterCallback"
+        name: "FooterCallback",
+        methods: {
+            feedbackForm(){
+                var form = document.getElementById("feedback");
+                form.style.display = (form.style.display == 'none') ? 'block' : 'none'
+            }
+        },
     }
 </script>
 
 <style scoped>
-.footer-callback_wrapper {
+.footer-callback__wrapper {
   margin-left: auto;
 }
-.play-button {
+.feedback-button {
   display: flex;
   align-items: center;
   width: max-content;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 18px;
   padding: 25px 40px;
   box-sizing: border-box;
   text-decoration: none;
@@ -32,12 +39,12 @@
   transition-duration: 0.3s;
   cursor: pointer;
 }
-.play-button > span {
+.feedback-button > span {
   color: #ffffff;
   font-weight: normal;
 }
-.play-button:hover {
-  transform: scale(0.97);
+.feedback-button:hover {
+  transform: scale(0.95);
   transition-duration: 0.3s;
   background-color: rgba(245, 245, 245, 0.11);
 }

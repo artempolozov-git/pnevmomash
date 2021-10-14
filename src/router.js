@@ -18,7 +18,20 @@ const router = new Router({
                 default: () => import('@/views/Home.vue')
             },
             meta: {
-                title: 'ПНЕВМОМАШ-Сургут',
+                title: 'Продажа и сервисный ремонт сварочных агрегатов Denyo | ПНЕВМОМАШ-СУРГУТ',
+                description: '',
+            },
+            children: [],
+        },
+        {
+            path: '/privacy',
+            name: 'privacy',
+            components: {
+                //aside: Aside,
+                default: () => import('@/components/PrivacyPolicy.vue')
+            },
+            meta: {
+                title: 'Политика конфиденциальности | ПНЕВМОМАШ-СУРГУТ',
                 description: '',
             },
             children: [],

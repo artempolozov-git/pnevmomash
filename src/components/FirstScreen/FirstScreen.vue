@@ -1,5 +1,5 @@
 <template>
-  <div class="firstscreen-wrapper">
+  <div class="firstscreen__wrapper">
     <div class="firm-logotype"><img src="@/assets/icons/denyo-logo.svg"></div>
     <h1 class="title">Продажа, аренда и сервисный ремонт сварочных агрегатов Denyo</h1>
     <p class="description">Продажа оригинальных запчастей и расходных материалов,<br>
@@ -20,32 +20,33 @@
 </script>
 
 <style scoped>
-.firstscreen-wrapper {
+.firstscreen__wrapper {
   margin-top: 100px;
 }
 .firm-logotype {
-  width: 35%;
+  width: 30%;
 }
 .title {
-  width: 70%;
-  font-size: 55px;
+  width: 60%;
+  font-size: 45px;
   color: #ffffff;
   margin-bottom: 0;
 }
 .description {
-  font-weight: 500;
+  font-weight: normal;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
 }
 .play-button {
   display: flex;
   align-items: center;
   width: max-content;
-  border-radius: 6px;
   margin-top: 60px;
   padding: 15px 40px;
   box-sizing: border-box;
+  border-radius: 5px;
   text-decoration: none;
+  font-size: 18px;
   background-color: #e10c19;
   transition-duration: 0.3s;
 }
@@ -55,11 +56,10 @@
 }
 .play-button > span {
   color: #ffffff;
-  font-size: 18px;
   font-weight: normal;
 }
 .play-button:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
   transition-duration: 0.3s;
   background-color: #cd0c19;
 }
