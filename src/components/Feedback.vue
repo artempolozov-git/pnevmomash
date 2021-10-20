@@ -207,7 +207,7 @@
 }
 @media only screen and (max-width : 600px) {
   .form__wrapper {
-    padding: 80px 50px;
+    padding: 70px 50px;
   }
 }
 </style>
