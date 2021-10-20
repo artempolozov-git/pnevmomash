@@ -12,6 +12,7 @@
     "swiper": "^5.4.5",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-burger-menu": "^2.0.5",
     "vue-masked-input": "^0.5.2",
     "vue-router": "^3.5.2",
     "vue-scrollto": "^2.20.0"

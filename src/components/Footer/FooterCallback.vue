@@ -74,4 +74,19 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+@media only screen and (max-width : 1750px) {
+  .feedback-button {
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .feedback-button {
+    margin: 40px auto 0;
+  }
+  .catalog {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
 </style>

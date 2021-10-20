@@ -1,14 +1,16 @@
 <template>
   <div class="firstscreen__wrapper">
-    <div class="firm-logotype"><img src="@/assets/icons/denyo-logo.svg"></div>
-    <h1 class="title">Продажа, аренда и сервисный ремонт сварочных агрегатов Denyo</h1>
-    <p class="description">Продажа оригинальных запчастей и расходных материалов,<br>
-      которые всегда есть в наличии!</p>
-    <div>
-      <a href="https://www.youtube.com/watch?v=akvSYwN_1CE&ab_channel=iGluhoff" class="play-button" target="_blank">
-        <img src="@/assets/icons/play-icon.svg">
-        <span>Видео о нас</span>
-      </a>
+    <div class="firstscreen__container">
+      <div class="firm-logotype"><img src="@/assets/icons/denyo-logo.svg"></div>
+      <h1 class="title">Продажа, аренда и сервисный ремонт сварочных агрегатов Denyo</h1>
+      <p class="description">Продажа оригинальных запчастей и расходных материалов,<br id="clear">
+        которые всегда есть в наличии!</p>
+      <div>
+        <a href="https://www.youtube.com/watch?v=akvSYwN_1CE&ab_channel=iGluhoff" class="play-button" target="_blank">
+          <img src="@/assets/icons/play-icon.svg">
+          <span>Видео о нас</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -21,7 +23,9 @@
 
 <style scoped>
 .firstscreen__wrapper {
-  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .firm-logotype {
   width: 30%;
@@ -33,7 +37,6 @@
   margin-bottom: 0;
 }
 .description {
-  font-weight: normal;
   color: #ffffff;
   font-size: 20px;
 }
@@ -62,5 +65,76 @@
   transform: scale(0.95);
   transition-duration: 0.3s;
   background-color: #cd0c19;
+}
+@media only screen and (max-width : 1750px) {
+  .title {
+    font-size: 35px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .play-button {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  .play-button > img {
+    width: 40px;
+  }
+}
+@media only screen and (max-width : 1680px) {
+  .firm-logotype {
+    width: 40%;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .firm-logotype {
+    width: 30%;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .firm-logotype {
+    width: 40%;
+    margin: auto;
+  }
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px auto 20px;
+    width: 80%;
+  }
+  .description {
+    font-size: 16px;
+    text-align: center;
+  }
+  .play-button {
+    margin: 50px auto 0;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .firm-logotype {
+    width: 50%;
+  }
+  .title {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .firm-logotype {
+    width: 70%;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .firstscreen__wrapper {
+    margin-top: 70px;
+  }
+  #clear {
+    display: none;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .firm-logotype {
+    width: 80%;
+  }
 }
 </style>

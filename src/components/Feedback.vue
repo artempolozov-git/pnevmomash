@@ -1,26 +1,28 @@
 <template>
   <div id="feedback" style="display: none">
     <div class="overlay">
-      <form class="form__wrapper">
-        <div class="feedback-form__container">
-          <div class="close-button">
-            <span class="close-icon" @click="feedbackForm">&times;</span>
+        <form class="form__wrapper">
+          <div class="form">
+            <div class="feedback-form__container">
+              <div class="close-button">
+                <span class="close-icon" @click="feedbackForm">&times;</span>
+              </div>
+              <div class="title-container">
+                <h2 class="form-title">Обратная связь</h2>
+                <p class="form-description">Отправьте свой запрос и наш специалист свяжется с Вами в ближайшее время!</p>
+              </div>
+            </div>
+            <div class="data-input">
+              <input name="Имя" type="text" placeholder="Имя" required>
+            </div>
+            <div class="data-input">
+              <masked-input name="Телефон" mask="\+\7 (111) 111 11-11" type="text" placeholder="Телефон" required></masked-input>
+            </div>
+            <div class="send-button">
+              <input type="submit" id="my-form-button" value="Отправить запрос">
+            </div>
           </div>
-          <div class="title-container">
-            <h2 class="form-title">Обратная связь</h2>
-            <p class="form-description">Отправьте свой запрос и наш специалист свяжется с Вами в ближайшее время!</p>
-          </div>
-        </div>
-        <div class="data-input">
-          <input name="Имя" type="text" placeholder="Имя" required>
-        </div>
-        <div class="data-input">
-          <masked-input name="Телефон" mask="\+\7 (111) 111 11-11" type="text" placeholder="Телефон" required></masked-input>
-        </div>
-        <div class="send-button">
-          <input type="submit" id="my-form-button" value="Отправить запрос">
-        </div>
-      </form>
+        </form>
     </div>
   </div>
 </template>
@@ -94,7 +96,7 @@
   color: #2a2b30;
 }
 .form-description {
-  font-size: 20px;
+  font-size: 16px;
   color: #737373;
   text-align: center;
 }
@@ -126,7 +128,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: #e76c1e;
-  font-size: 18px;
+  font-size: 16px;
   font-family: HelveticaNeueCyr;
   color: #ffffff;
   cursor: pointer;
@@ -138,5 +140,74 @@
   transform: scale(0.95);
   transition-duration: 0.3s;
   background-color: #ff7621;
+}
+@media only screen and (max-width : 1680px) {
+  .form-title {
+    font-size: 26px;
+  }
+  .form-description {
+    font-size: 14px;
+  }
+  .send-button > input, .data-input > input {
+    font-size: 14px;
+  }
+  .overlay {
+    width: 35%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width : 1680px) {
+  .overlay {
+    width: 30%;
+    top: 25%;
+  }
+}
+@media only screen and (max-width : 1600px) {
+  .overlay {
+    width: 30%;
+    top: 20%;
+  }
+}
+@media only screen and (max-width : 1536px) {
+  .overlay {
+    width: 35%;
+    top: 20%;
+  }
+}
+@media only screen and (max-width : 1280px) {
+  .overlay {
+    width: 40%;
+    top: 25%;
+  }
+}
+@media only screen and (max-height : 720px) {
+  .overlay {
+    width: 40%;
+    top: 0;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .overlay {
+    width: 50%;
+    top: 5%;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .overlay {
+    width: 100%;
+    top: 0;
+  }
+  .form__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 80px 150px;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .form__wrapper {
+    padding: 80px 50px;
+  }
 }
 </style>

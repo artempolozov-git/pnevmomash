@@ -14,12 +14,17 @@
         <span>+7 (982) 417-47-99</span>
       </a>
     </div>
+    <div class="burger-menu">
+      <burger-menu></burger-menu>
+    </div>
   </div>
 </template>
 
 <script>
+    import BurgerMenu from "@/components/BurgerMenu";
     export default {
         name: "NavigationMenu",
+        components: {BurgerMenu},
     }
 </script>
 
@@ -29,7 +34,7 @@
   align-items: center;
 }
 .logotype {
-  width: 17%;
+  width: 300px;
 }
 .nav-links {
   display: flex;
@@ -38,7 +43,6 @@
 }
 .link {
   color: #ffffff;
-  font-weight: normal;
   margin-right: 60px;
   padding-bottom: 5px;
   font-size: 18px;
@@ -82,5 +86,40 @@
   font-weight: normal;
   padding-bottom: 5px;
   position: relative;
+}
+.burger-menu {
+  display: none;
+}
+@media only screen and (max-width : 1750px) {
+  .link {
+    font-size: 14px;
+  }
+  .phone-links > span {
+    font-size: 18px;
+  }
+  .phone-links > img {
+    width: 40px;
+  }
+  .logotype {
+    width: 250px;
+  }
+}
+@media only screen and (max-width : 1280px) {
+  .link {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width : 1200px) {
+  .nav-links, .phone-links {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+@media only screen and (max-width : 450px) {
+  .logotype {
+    width: 200px;
+  }
 }
 </style>

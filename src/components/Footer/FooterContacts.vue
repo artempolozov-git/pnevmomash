@@ -67,4 +67,17 @@
   padding-bottom: 5px;
   position: relative;
 }
+@media only screen and (max-width : 1750px) {
+  .block-title {
+    font-size: 18px;
+  }
+  .contact-links {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .footer-contacts__wrapper {
+    display: none;
+  }
+}
 </style>

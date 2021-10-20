@@ -99,9 +99,63 @@
     transition-duration: 0.3s;
     background-color: #ff7621;
   }
-  @media only screen and (max-width : 1680px) {
+  @media only screen and (max-width : 1750px) {
     .offers__wrapper {
+      margin: 100px auto;
       width: 70%;
+    }
+    .title {
+      font-size: 32px;
+    }
+    .data-input > input {
+      height: 50px;
+      font-size: 14px;
+    }
+    .send-button > input {
+      font-size: 14px;
+    }
+  }
+  @media only screen and (max-width : 1280px) {
+    .data-input > input {
+      width: 250px;
+    }
+  }
+  @media only screen and (max-width : 1024px) {
+    .title {
+      font-size: 26px;
+    }
+    .offers__wrapper {
+      width: 100%;
+    }
+    .offers__container {
+      padding: 50px;
+    }
+  }
+  @media only screen and (max-width : 800px) {
+    .service-form {
+      display: block;
+    }
+    .data-input > input {
+      margin-bottom: 30px;
+    }
+    .description {
+      width: 75%;
+    }
+  }
+  @media only screen and (max-width : 600px) {
+    .description {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width : 533px) {
+    .offers__wrapper {
+      margin: 70px auto;
+    }
+    .offers__container {
+      background-position: right;
+    }
+    .description {
+      color: #ffffff;
     }
   }
 </style>

@@ -36,14 +36,18 @@
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="mobile-card">
+      <rent-mobile></rent-mobile>
     </div>
   </section>
 </template>
 
 <script>
+    import RentMobile from "@/components/Products/RentMobile";
     export default {
         name: "WeldingRent",
+        components: {RentMobile},
         methods: {
             feedbackForm(){
                 var form = document.getElementById("feedback");
@@ -140,9 +144,57 @@
   transition-duration: 0.3s;
   background-color: rgba(245, 245, 245, 0.11);
 }
-@media only screen and (max-width : 1680px) {
+.mobile-card {
+  display: none;
+}
+@media only screen and (max-width : 1750px) {
   .products__wrapper {
-    padding: 100px 100px 0;
+    padding: 70px 100px 0;
+  }
+  .products__block {
+    grid-column-gap: 40px;
+  }
+  .product-card__first, .product-card__two {
+    padding: 40px;
+  }
+  .product-title {
+    font-size: 16px;
+  }
+  .button {
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .products__wrapper {
+    padding: 70px 50px 0;
+  }
+  .description {
+    width: 70%;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .products__wrapper {
+    padding: 50px 50px 0;
+  }
+  .products__block {
+    display: none;
+  }
+  .mobile-card {
+    display: block;
+  }
+  .title {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .title, .description {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .products__wrapper {
+    padding: 50px 30px 0;
   }
 }
 </style>

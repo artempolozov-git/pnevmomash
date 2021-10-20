@@ -51,4 +51,14 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+@media only screen and (max-width : 1750px) {
+  .block-title {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .footer-navigation__wrapper {
+    display: none;
+  }
+}
 </style>

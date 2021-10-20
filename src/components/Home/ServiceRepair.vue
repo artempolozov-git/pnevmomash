@@ -114,4 +114,69 @@
   transition-duration: 0.3s;
   background-color: #ff7621;
 }
+@media only screen and (max-width : 1536px) {
+  .description {
+    font-size: 18px;
+  }
+  .service-image {
+    width: 550px;
+    height: 408px;
+  }
+  .data-input > input {
+    width: 350px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .send-button > input {
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .service__wrapper {
+    padding: 0 100px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .service__container {
+    display: block;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .description {
+    font-size: 16px;
+    margin: 15px auto 0;
+  }
+  .service-information {
+    width: 100%;
+    text-align: center;
+  }
+  .service-image {
+    width: 410px;
+    height: 308px;
+  }
+  .information {
+    margin: 15px auto 0;
+  }
+  .service-image {
+    margin: 50px auto 0;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .description, .information {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .service__wrapper {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width : 490px) {
+  .service-image {
+    width: 350px;
+    height: 260px;
+  }
+}
 </style>

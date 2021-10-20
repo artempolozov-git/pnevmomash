@@ -116,9 +116,62 @@
   width: 780px;
   height: 615px;
 }
-@media only screen and (max-width : 1680px) {
+@media only screen and (max-width : 1750px) {
   .contacts__wrapper {
+    margin-top: 100px;
     padding: 100px 150px;
+  }
+  .contact-links > span {
+    font-size: 18px;
+  }
+  .contact-links > img {
+    width: 40px;
+  }
+  .address > span {
+    font-size: 16px;
+  }
+  .map > iframe {
+    width: 680px;
+    height: 515px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .contacts__wrapper {
+    padding: 100px;
+  }
+  .map > iframe {
+    width: 580px;
+    height: 515px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .title {
+    font-size: 26px;
+  }
+  .contacts__wrapper {
+    padding: 50px;
+  }
+  .map > iframe {
+    width: 400px;
+    height: 515px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .contacts__container {
+    display: block;
+  }
+  .contacts-information {
+    text-align: center;
+  }
+  .contact-links {
+    margin: 40px auto 0;
+  }
+  .map {
+    margin-top: 50px;
+  }
+  .map > iframe {
+    width: 100%;
+    height: 415px;
   }
 }
 </style>

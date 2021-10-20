@@ -54,9 +54,47 @@
   color: #7d7d7d;
   text-align: center;
 }
-@media only screen and (max-width : 1680px) {
+@media only screen and (max-width : 1750px) {
   .players__wrapper {
-    padding: 90px 100px;
+    padding: 70px 100px;
+    margin-top: 100px;
+  }
+  .players__container {
+    grid-column-gap: 30px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .players__wrapper {
+    padding: 70px 50px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .title {
+    font-size: 26px;
+  }
+  .players__container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+  }
+  .video-players {
+    margin: auto;
+  }
+  .video-players > iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width : 570px) {
+  .players__wrapper {
+    margin-top: 70px;
+  }
+  .players__container {
+    display: block;
+  }
+  .video-players > iframe {
+    width: 100%;
+    height: 300px;
   }
 }
 </style>

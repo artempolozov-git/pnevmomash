@@ -1,12 +1,6 @@
 <template>
-  <section class="products__wrapper">
-    <div class="title__container">
-      <h2 class="title">Продажа дизельных генераторов</h2>
-      <p class="description">Удобная эксплуатация. На панели управления расположены все необходимые датчики, индикаторы для контроля процесса.
-        Стабильный запуск при низких температурах, обеспечен за счет мощного аккумулятора, что важно для российского климата!</p>
-    </div>
-    <div class="products__block">
-
+  <swiper class="swiper" :options="swiperOption">
+    <swiper-slide>
       <div class="card__first">
         <div class="product-card__first">
           <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
@@ -21,7 +15,8 @@
           </div>
         </div>
       </div>
-
+    </swiper-slide>
+    <swiper-slide>
       <div class="card__two">
         <div class="product-card__two">
           <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
@@ -36,7 +31,8 @@
           </div>
         </div>
       </div>
-
+    </swiper-slide>
+    <swiper-slide>
       <div class="card__three">
         <div class="product-card__three">
           <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
@@ -49,18 +45,35 @@
           <div class="button" @click="feedbackForm">Узнать стоимость</div>
         </div>
       </div>
-    </div>
-    <div class="mobile-card">
-      <generators-mobile></generators-mobile>
-    </div>
-  </section>
+    </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
 </template>
 
 <script>
-    import GeneratorsMobile from "@/components/Products/GeneratorsMobile";
+    import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+    import 'swiper/css/swiper.css'
+
     export default {
-        name: "DieselGenerators",
-        components: {GeneratorsMobile},
+        name: "GeneratorsMobile",
+        components: {
+            Swiper,
+            SwiperSlide
+        },
+        data() {
+            return {
+                swiperOption: {
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    grabCursor: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                }
+            }
+        },
         methods: {
             feedbackForm(){
                 var form = document.getElementById("feedback");
@@ -71,46 +84,26 @@
 </script>
 
 <style scoped>
-  .products__wrapper {
-    padding: 100px 150px 0;
-  }
-  .title__container {
-    text-align: center;
-  }
-  .title {
-    font-size: 32px;
-    color: #333333;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  .description {
-    width: 60%;
-    margin: auto;
-    color: #737373;
-  }
-  .products__block {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 0px;
+  .swiper-container {
     margin-top: 50px;
+  }
+  .swiper-slide {
+    width: max-content;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: max-content;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: max-content;
   }
   .card__first {
     background: linear-gradient(0deg, rgba(54,89,152,1) 0%, rgba(56,103,182,1) 100%);
-    transition: transform .3s;
   }
   .card__two {
     background: linear-gradient(0deg, rgba(11,124,129,1) 0%, rgba(72,168,175,1) 100%);
-    transition: transform .3s;
   }
   .card__three {
     background: linear-gradient(0deg, rgba(75,64,66,1) 0%, rgba(126,118,121,1) 100%);
-    transition: transform .3s;
-  }
-  .card__first:hover, .card__two:hover, .card__three:hover  {
-    transform: scale(1.02);
-    transition: transform .3s;
   }
   .product-card__first, .product-card__two, .product-card__three {
     width: 100%;
@@ -137,7 +130,7 @@
   }
   .product-title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
   }
   .product-value {
@@ -148,7 +141,7 @@
     align-items: center;
     width: max-content;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 14px;
     padding: 25px 40px;
     box-sizing: border-box;
     margin: 50px auto 0;
@@ -165,60 +158,18 @@
     transition-duration: 0.3s;
     background-color: rgba(245, 245, 245, 0.11);
   }
-  .mobile-card {
-    display: none;
-  }
-  @media only screen and (max-width : 1750px) {
-    .products__wrapper {
-      padding: 70px 100px 0;
+  @media only screen and (max-width : 533px) {
+    .swiper-slide {
+      width: 100%;
     }
-    .description {
-      width: 70%;
+    .swiper-slide:nth-child(2n) {
+      width: 100%;
     }
-    .products__block {
-      grid-column-gap: 40px;
+    .swiper-slide:nth-child(3n) {
+      width: 100%;
     }
     .product-card__first, .product-card__two, .product-card__three {
       padding: 40px;
-    }
-    .product-title {
-      font-size: 16px;
-    }
-    .button {
-      font-size: 14px;
-      padding: 20px 30px;
-    }
-  }
-  @media only screen and (max-width : 1366px) {
-    .products__wrapper {
-      padding: 70px 50px 0;
-    }
-    .description {
-      width: 70%;
-    }
-  }
-  @media only screen and (max-width : 1024px) {
-    .products__wrapper {
-      padding: 50px 50px 0;
-    }
-    .products__block {
-      display: none;
-    }
-    .mobile-card {
-      display: block;
-    }
-    .title {
-      font-size: 26px;
-    }
-  }
-  @media only screen and (max-width : 800px) {
-    .title, .description {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width : 600px) {
-    .products__wrapper {
-      padding: 50px 30px 0;
     }
   }
 </style>

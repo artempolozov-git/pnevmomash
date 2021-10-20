@@ -101,13 +101,11 @@
 }
 .description {
   font-size: 20px;
-  margin-top: 15px;
   font-weight: normal;
   color: #515151;
   width: 80%;
 }
 .information {
-  margin-top: 15px;
   color: #515151;
   width: 80%;
 }
@@ -131,9 +129,75 @@
   transition-duration: 0.3s;
   background-color: #ff7621;
 }
-@media only screen and (max-width : 1680px) {
+@media only screen and (max-width : 1750px) {
   .about__wrapper {
+    margin-top: 100px;
     padding: 0 100px;
+  }
+  .swiper {
+    width: 600px;
+    height: 822px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .send-button {
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .swiper {
+    width: 500px;
+    height: 722px;
+  }
+  .about__wrapper {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .about__container {
+    display: block;
+  }
+  .about-information {
+    width: 100%;
+    margin: 50px 0 0;
+    text-align: center;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .description {
+    font-size: 16px;
+    width: 50%;
+    margin: auto;
+  }
+  .information {
+    margin: auto;
+    width: 60%;
+  }
+  .send-button {
+    margin: 50px auto 0;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .description, .information {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .about__wrapper {
+    margin-top: 70px;
+  }
+  .swiper {
+    width: 400px;
+    height: 522px;
+  }
+}
+@media only screen and (max-width : 450px) {
+  .swiper {
+    width: 100%;
+    height: 500px;
   }
 }
 </style>

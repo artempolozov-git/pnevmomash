@@ -70,7 +70,7 @@ export default {
     align-self: center;
     width: -webkit-fill-available;
   }
-  @media only screen and (max-width : 1536px) {
+  @media only screen and (max-width : 1750px) {
     body {
       font-size: 14px;
     }

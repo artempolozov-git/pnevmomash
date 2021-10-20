@@ -49,9 +49,34 @@
     color: #ffffff;
     width: 55%;
   }
-  @media only screen and (max-width : 1680px) {
+  @media only screen and (max-width : 1750px) {
     .offers__wrapper {
+      margin: 100px auto 0;
       width: 70%;
+    }
+    .title {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (max-width : 1024px) {
+    .offers__wrapper {
+      width: 100%;
+    }
+    .offers__container {
+      padding: 50px;
+    }
+  }
+  @media only screen and (max-width : 600px) {
+    .firm-logotype {
+      width: 35%;
+    }
+    .title, .description {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width : 533px) {
+    .offers__wrapper {
+      margin: 70px auto 0;
     }
   }
 </style>

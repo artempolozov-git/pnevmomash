@@ -3,7 +3,7 @@
     <div class="footer__container__main">
       <div class="logo-container">
         <div class="logotype"><img src="@/assets/icons/logotype.svg"></div>
-        <div class="up-button" v-scroll-to="{el:'#up'}"><img src="@/assets/icons/arrow-up.svg"></div>
+        <div class="up-button"><img src="@/assets/icons/arrow-up.svg" v-scroll-to="{el:'#up'}"></div>
       </div>
       <footer-contacts></footer-contacts>
       <footer-navigation></footer-navigation>
@@ -97,12 +97,50 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-@media only screen and (max-width : 1680px) {
+@media only screen and (max-width : 1750px) {
   .footer__container__main  {
     padding: 100px 100px;
   }
   .privacy__container {
     padding: 40px 100px;
+  }
+  .logotype {
+    width: 250px;
+  }
+  .up-button > img {
+    margin-top: 50px;
+    width: 60px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .footer__container__main {
+    padding: 100px 50px;
+  }
+  .privacy__container {
+    padding: 40px 50px;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .privacy__container {
+    display: block;
+    text-align: center;
+  }
+  .copyright {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .footer__container__main {
+    padding: 70px 50px;
+    display: block;
+  }
+  .logo-container {
+    display: flex;
+  }
+  .up-button > img {
+    margin-top: 0;
+    margin-left: 100px;
+    width: 45px;
   }
 }
 </style>

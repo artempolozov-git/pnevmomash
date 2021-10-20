@@ -1,12 +1,6 @@
 <template>
-  <section class="products__wrapper">
-    <div class="title__container">
-      <h2 class="title" id="equipment">Продажа сварочных агрегатов</h2>
-      <p class="description">Японские дизельные сварочные агрегаты Denyo успешно эксплуатируются в более чем 130 странах мира и незаменимы
-        в полевых условиях, а также в местах, где имеется нехватка или полностью отсутствует электроэнергия!</p>
-    </div>
-    <div class="products__block">
-
+  <swiper class="swiper" :options="swiperOption">
+    <swiper-slide>
       <div class="card__first">
         <div class="product-card__first">
           <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
@@ -26,27 +20,29 @@
           </div>
         </div>
       </div>
-
+    </swiper-slide>
+    <swiper-slide>
       <div class="card__two">
-        <div class="product-card__two">
-          <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
-          <h2 class="product-title">Дизельный двухпостовой сварочный <br>агрегат Denyo DLW-400LSW</h2>
-          <div class="product-value">
-            <p><span style="font-weight: normal">Номинальная мощность: </span>12,9кВт</p>
-            <p><span style="font-weight: normal">Номинальный ток: </span>370А</p>
-            <p><span style="font-weight: normal">Однопостовая сварка: </span>60-380А</p>
-            <p><span style="font-weight: normal">Электрод при однопостовой сварке: </span>2,0-8,0мм</p>
-            <p><span style="font-weight: normal">Двухпостовая сварка: </span>30-190А</p>
-            <p><span style="font-weight: normal">Электрод при двухпостовой сварке: </span>2,0-4,0мм</p>
-            <p><span style="font-weight: normal">Продолжительность включения: </span>100%</p>
-            <p><span style="font-weight: normal">Генератор: </span>15кВа</p>
-          </div>
-          <div class="button" @click="feedbackForm">
-            <span>Узнать стоимость</span>
-          </div>
+      <div class="product-card__two">
+        <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
+        <h2 class="product-title">Дизельный двухпостовой сварочный <br>агрегат Denyo DLW-400LSW</h2>
+        <div class="product-value">
+          <p><span style="font-weight: normal">Номинальная мощность: </span>12,9кВт</p>
+          <p><span style="font-weight: normal">Номинальный ток: </span>370А</p>
+          <p><span style="font-weight: normal">Однопостовая сварка: </span>60-380А</p>
+          <p><span style="font-weight: normal">Электрод при однопостовой сварке: </span>2,0-8,0мм</p>
+          <p><span style="font-weight: normal">Двухпостовая сварка: </span>30-190А</p>
+          <p><span style="font-weight: normal">Электрод при двухпостовой сварке: </span>2,0-4,0мм</p>
+          <p><span style="font-weight: normal">Продолжительность включения: </span>100%</p>
+          <p><span style="font-weight: normal">Генератор: </span>15кВа</p>
+        </div>
+        <div class="button" @click="feedbackForm">
+          <span>Узнать стоимость</span>
         </div>
       </div>
-
+    </div>
+    </swiper-slide>
+    <swiper-slide>
       <div class="card__three">
         <div class="product-card__three">
           <div class="product-logotype"><img src="@/assets/icons/denyo.svg"></div>
@@ -64,71 +60,65 @@
           <div class="button" @click="feedbackForm">Узнать стоимость</div>
         </div>
       </div>
-
-    </div>
-    <div class="mobile-card">
-      <equipment-mobile></equipment-mobile>
-    </div>
-  </section>
+    </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
 </template>
 
 <script>
-    import EquipmentMobile from "@/components/Products/EquipmentMobile";
-    export default {
-        name: "WeldingEquipment",
-        components: {EquipmentMobile},
-        methods: {
-            feedbackForm(){
-                var form = document.getElementById("feedback");
-                form.style.display = (form.style.display == 'none') ? 'block' : 'none'
-            }
-        },
-    }
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
+
+  export default {
+      name: "EquipmentMobile",
+      components: {
+          Swiper,
+          SwiperSlide
+      },
+      data() {
+          return {
+              swiperOption: {
+                  slidesPerView: 'auto',
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  grabCursor: true,
+                  pagination: {
+                      el: '.swiper-pagination',
+                      clickable: true
+                  },
+              }
+          }
+      },
+      methods: {
+          feedbackForm(){
+              var form = document.getElementById("feedback");
+              form.style.display = (form.style.display == 'none') ? 'block' : 'none'
+          }
+      },
+  }
 </script>
 
 <style scoped>
-  .products__wrapper {
-    padding: 100px 150px 0;
-    transition-duration: 0.3s;
-  }
-  .title__container {
-    text-align: center;
-  }
-  .title {
-    font-size: 32px;
-    color: #333333;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  .description {
-    width: 60%;
-    margin: auto;
-    color: #737373;
-  }
-  .products__block {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 0px;
+  .swiper-container {
     margin-top: 50px;
-    transition-duration: 0.3s;
+  }
+  .swiper-slide {
+    width: max-content;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: max-content;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: max-content;
   }
   .card__first {
     background: linear-gradient(0deg, rgba(2,139,154,1) 0%, rgba(0,178,201,1) 100%);
-    transition: transform .3s;
   }
   .card__two {
     background: linear-gradient(0deg, rgba(127,128,129,1) 0%, rgba(170,174,177,1) 100%);
-    transition: transform .3s;
   }
   .card__three {
     background: linear-gradient(0deg, rgba(12,72,144,1) 0%, rgba(55,119,214,1) 100%);
-    transition: transform .3s;
-  }
-  .card__first:hover, .card__two:hover, .card__three:hover  {
-    transform: scale(1.02);
-    transition: transform .3s;
   }
   .product-card__first, .product-card__two, .product-card__three {
     width: 100%;
@@ -155,7 +145,7 @@
   }
   .product-title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
   }
   .product-value {
@@ -166,8 +156,8 @@
     align-items: center;
     width: max-content;
     border-radius: 5px;
-    font-size: 18px;
-    padding: 25px 40px;
+    font-size: 14px;
+    padding: 20px 30px;
     box-sizing: border-box;
     margin: 50px auto 0;
     text-decoration: none;
@@ -183,65 +173,18 @@
     transition-duration: 0.3s;
     background-color: rgba(245, 245, 245, 0.11);
   }
-  .mobile-card {
-    display: none;
-  }
-  @media only screen and (max-width : 1750px) {
-    .products__wrapper {
-      padding: 70px 100px 0;
+  @media only screen and (max-width : 533px) {
+    .swiper-slide {
+      width: 100%;
     }
-    .products__block {
-      grid-column-gap: 40px;
+    .swiper-slide:nth-child(2n) {
+      width: 100%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 100%;
     }
     .product-card__first, .product-card__two, .product-card__three {
       padding: 40px;
-    }
-    .product-title {
-      font-size: 16px;
-    }
-    .button {
-      font-size: 14px;
-      padding: 20px 30px;
-    }
-  }
-  @media only screen and (max-width : 1366px) {
-    .products__wrapper {
-      padding: 70px 50px 0;
-    }
-    .description {
-      width: 70%;
-    }
-  }
-  @media only screen and (max-width : 1280px) {
-    .products__wrapper {
-      padding: 70px 20px 0;
-    }
-    .products__block {
-      grid-column-gap: 20px;
-    }
-  }
-  @media only screen and (max-width : 1024px) {
-    .products__wrapper {
-      padding: 50px 50px 0;
-    }
-    .products__block {
-      display: none;
-    }
-    .mobile-card {
-      display: block;
-    }
-    .title {
-      font-size: 26px;
-    }
-  }
-  @media only screen and (max-width : 800px) {
-    .title, .description {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width : 600px) {
-    .products__wrapper {
-      padding: 50px 30px 0;
     }
   }
 </style>

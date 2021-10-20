@@ -15,15 +15,20 @@
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
+    <div class="mobile-gallery">
+      <mobile-gallery></mobile-gallery>
+    </div>
   </section>
 </template>
 
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
     import 'swiper/css/swiper.css'
+    import MobileGallery from "@/components/Home/MobileGallery";
     export default {
-        name: "HomeGallery",
+        name: "Gallery",
         components: {
+            MobileGallery,
             Swiper,
             SwiperSlide
         },
@@ -58,7 +63,6 @@
   margin-top: 100px;
 }
 .title {
-  padding: 0 150px;
   box-sizing: border-box;
   margin-bottom: 50px;
   font-size: 32px;
@@ -99,5 +103,37 @@
 }
 .photo-9 {
   background-image: url(../../assets/images/gallery/dispatch-equipment.webp);
+}
+.mobile-gallery {
+  display: none;
+}
+@media only screen and (max-width : 1750px) {
+  .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6,
+  .photo-7, .photo-8, .photo-9 {
+    height: 400px
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .title {
+    font-size: 26px;
+  }
+  .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6,
+  .photo-7, .photo-8, .photo-9 {
+    height: 300px
+  }
+}
+@media only screen and (max-width : 800px) {
+  .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6,
+  .photo-7, .photo-8, .photo-9 {
+    height: 250px
+  }
+}
+@media only screen and (max-width : 600px) {
+  .swiper {
+    display: none;
+  }
+  .mobile-gallery {
+    display: block;
+  }
 }
 </style>

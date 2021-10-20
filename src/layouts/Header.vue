@@ -17,7 +17,7 @@
 <style scoped>
 .header__container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding: 100px 150px;
   box-sizing: border-box;
   background: url(../assets/images/header-background.webp);
@@ -25,9 +25,20 @@
   background-position: center;
   transition-duration: 0.3s;
 }
-@media only screen and (max-width : 1680px) {
+@media only screen and (max-width : 1750px) {
   .header__container {
-    padding: 100px 100px;
+    padding: 70px 100px;
+  }
+}
+@media only screen and (max-width : 1366px) {
+  .header__container {
+    padding: 70px;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .header__container {
+    padding: 70px 40px;
+    height: auto;
   }
 }
 </style>

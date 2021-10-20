@@ -53,7 +53,6 @@
     color: #ffffff;
     font-size: 20px;
     margin: 0;
-    font-weight: normal;
   }
   .play-button {
     display: flex;
@@ -82,9 +81,50 @@
     transition-duration: 0.3s;
     background-color: rgba(245, 245, 245, 0.11);
   }
-  @media only screen and (max-width : 1680px) {
+  @media only screen and (max-width : 1750px) {
     .offers__wrapper {
+      margin: 100px auto;
       width: 70%;
+    }
+    .play-button {
+      font-size: 14px;
+      padding: 15px 30px;
+    }
+    .play-button > img {
+      width: 40px;
+    }
+    .description {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 32px;
+    }
+  }
+  @media only screen and (max-width : 1024px) {
+    .offers__wrapper {
+      width: 100%;
+    }
+    .offers__container {
+      padding: 50px;
+    }
+  }
+  @media only screen and (max-width : 800px) {
+    .title {
+      width: 70%;
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width : 600px) {
+    .title {
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width : 533px) {
+    .offers__wrapper {
+      margin: 70px auto;
+    }
+    .title {
+      width: 90%;
     }
   }
 </style>
